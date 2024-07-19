@@ -43,13 +43,6 @@ def start(message):
     )
 
 
-@bot.message_handler(commands=["send_image"])
-def send_image(message):
-    # Ouvrir l'image avec open() et envoyer avec send_photo()
-    with open("C:\/Users\mvoul\OneDrive\Pictures\code.png", "rb") as photo:
-        bot.send_photo(message.chat.id, photo, caption="React code")
-
-
 @bot.message_handler(func=lambda message: True)
 def echo_all(message):
     if (
