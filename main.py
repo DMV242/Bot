@@ -72,8 +72,6 @@ def echo_all(message):
             message.chat.id,
             "Veuilez un indiquez votre langage de programmation précédé de la commande ##Learn##\n exemple: ##Learn## Python",
         )
-    elif message.text == "Par téléphone 📞":
-        bot.send_message(message.chat.id, "Son numéro est le +33663851047")
     elif message.text == "Linkedin 📨":
         bot.send_message(
             message.chat.id,
@@ -169,15 +167,14 @@ home_keyboard.add(button1, button2, button3)
 
 # CONTACT KEYBOARD
 
-button4 = types.KeyboardButton("Par téléphone 📞")
 button5 = types.KeyboardButton("Linkedin 📨")
-contact_keyboard.add(button4, button5)
+contact_keyboard.add(button5)
 
 
 # FREELANCE KEYBOARD
 button6 = types.KeyboardButton("Envoyez un mail avec le debrief de la mission 📨")
 
-Freelance_keyboard.add(button4, button5, button6)
+Freelance_keyboard.add(button5, button6)
 
 
 # Handle '/start' and '/help'
